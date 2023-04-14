@@ -1,53 +1,114 @@
-let array = [1, 2, 3]
-let array2 = [4, 5, 6]
-//task1
-console.log(array.concat(array2));
+// TASK 1
+let num1 = prompt("Введите число 1");
+let num2 = prompt("Введите число 2");
+let sum = num1 + num2;
 
-//task2
-console.log(array.reverse());
+switch (sum) {
+  case 10:
+    alert(10);
+    break;
+  case 20:
+    alert(20);
+    break;
+  default:
+    alert("default");
+    break;
+}
 
-//task3
-let arrayy = [1, 2, 3]
- arrayy.push(4,5,6)
-console.log(arrayy);
+//TASK2
+let month = prompt("Введите название месяца")
 
-//task4
-let arrayyy = [1, 2, 3]
-arrayyy.unshift(4,5,6)
-console.log(arrayyy);
+switch (month) {
+  case "декабрь":
+  case "январь":
+  case "февраль":
+    alert("Месяц относится к зиме");
+    break;
+  case "март":
+  case "апрель":
+  case "май":
+    alert("Месяц относится к весне");
+    break;
+  case "июнь":
+  case "июль":
+  case "август":
+    alert("Месяц относится к лету");
+    break;
+  case "сентябрь":
+  case "октябрь":
+  case "ноябрь":
+    alert("Месяц относится к осени");
+    break;
+  default:
+    alert("Неверное название месяца");
+    break;
+}
 
-//task5
-let stringArray =  ['js', 'css', 'jq']
-let firstElem = stringArray.slice(0,1 ).shift();
-console.log(firstElem);
+//TASK3
+let age = prompt("Введите возраст ученика");
+age = parseInt(age);
 
-//task6
-let lastElem = stringArray.pop()
-console.log(lastElem)
+switch (age) {
+  case 6:
+  case 7:
+    alert("Первоклассник");
+    break;
+  case 8:
+  case 9:
+  case 10:
+    alert("Ученик из начальной школы");
+    break;
+  case 11:
+  case 12:
+  case 13:
+    alert("Ученик из средней школы");
+    break;
+  case 14:
+  case 15:
+  case 16:
+    alert("Ученик из старшей школы");
+    break;
+  default:
+    alert("Не ученик");
+    break;
+}
 
-//task7
-let arr = [1, 2, 3, 4, 5]
-let res = arr.slice(3)
-console.log(res);
+//TASK4
+const person1 = {
+    age: 17,
+    firstName: "Akusi",
+    lastName: "Zuparova"
+  };
+  
+  console.log("Age:", person1.age);
+  console.log("First Name:", person1.firstName);
+  console.log("Last Name:", person1.lastName);
 
-//task8
-let aray = [1, 2, 3, 4, 5]
-aray.splice(1,2)
-console.log(aray);
+  //TASK5
+  const arr2 = [1, 2, 3, 4, 5];
+console.log( arr2[2])
 
-//task9
-let a = [1, 2, 3, 4, 5]
-  let b = a.splice(1,3)
-console.log(b);
 
-//task10
-let ar = [1, 2, 3, 4, 5]
-let r = ar.splice(3,0,`'a', 'b', 'c'`)
-console.log(ar);
+//TASK6
+const person = {};
 
-//task11
-let arrr = [1, 2, 3, 4, 5]
- arrr.splice(1,0,'a', 'b',)
- arrr.splice(6,0,'c',)
- arrr.splice(8,0,'e')
-console.log(arrr);
+person.firstName = prompt("Введите имя");
+person.lastName = prompt("Введите фамилию");
+person.age = prompt("Введите возраст");
+
+console.log("Person:", person);
+
+//TASK7
+const input = prompt("Введите значение");
+const obj = {};
+const arr = [];
+
+if (input === "Объект") {
+  obj.value = input;
+  console.log("Объект:", obj);
+} else if (input === "Массив") {
+  arr.push(input);
+  console.log("Массив:", arr);
+} else {
+  console.log("error");
+}
