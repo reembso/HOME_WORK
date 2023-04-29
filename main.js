@@ -1,146 +1,179 @@
-//TASK1
-function sumFn(a,b) {
-    return a + b
-}
-console.log(sumFn(2,2));
+//1 TASK
+const personn = { name: "Akylai", age: 16, city: "BISHKEK" };
 
-//TASK2
-function changeFn(str) {
-const newStr = str[0].toUpperCase() + str.slice([1])
-console.log(newStr);
-}
-changeFn(`string`)
+ const { name: personName, age: personAge, city: personCity } = personn;
 
-//TASK3
-function arrayFn(arr) {
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-        result.push(arr[i] * 1);
-    }
-    return result;
-}
-console.log(arrayFn([1,2,3,4,5]));
+ console.log(personName);
+ console.log(personAge);
+ console.log(personCity);
 
-//TASK4
-function simbolFn(str,char) {
-    let count = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === char) {
-            count++;
-        }
-    }
-    return count;
-}
-let result = simbolFn(`bibibingo`,`b`)
-console.log(result);
 
-//TASK5
-function summaFn(arr) {
-  let summa = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 3 === 0) {
-      summa += arr[i];
-    }
-    return summa;
+// 2 TASK
+ const informationAboutFamousPeople = [
+     {
+         name: `JohnnyDepp`,
+         age:59
+     },
+     {
+         name:`ElonMusk`,
+         age:51
+     }
+ ]
+ const {name:firstName,age:firstAge} = informationAboutFamousPeople[0]
+ console.log(firstAge);
+ console.log(firstName);
+
+//3 TASK
+ const obj = {
+      numArr : [1,2,3,4,5]
+   }
+   const {numArr:[firstNum,secondNum]} = obj
+   console.log({firstNum,secondNum})
+
+//4 TASK
+const human = {
+    name: 'SEIYT',
+    age: 18
+  };
+  
+  const {name: name1} = human;
+  const newPerson = {name1};
+  
+  console.log(newPerson);
+  
+// 5 TASK
+let girl = {
+  name: `Aliman`,
+  age: 16,
+  city: `NARYN`,
+};
+function fnSayInformation() {
+  let { name: girlName, age: girlAge, city: girlCity } = girl;
+  console.log(girlName, girlAge, girlCity);
+}
+fnSayInformation();
+
+//6 TASK
+ const numbers1 = [1, 2, 3];
+ const numbers2 = [4, 5, 6];
+ const allNumbers = [...numbers1, ...numbers2];
+ console.log(allNumbers);
+
+//7 TASK
+let person1 = {
+  name: `meka`,
+  age: 17,
+};
+
+ let person2 = {
+   city: `Karakol`,
+   gender: `male`,
+ };
+ const newPersonn = { ...person1, ...person2 };
+ console.log(newPersonn);
+
+
+ //8 TASK
+ const numArray = [1, 2, 3, 4];
+ let res;
+ function returnNewArray() {
+   return (res = [...numArray, 0]);
+ }
+ returnNewArray(numArray);
+ console.log(res);
+
+//9 TASK 
+let persoon = {
+  name: `lili`,
+  age: 10,
+ };
+ const newPersoon = { ...persoon, city: `tashkent` };
+ console.log(newPersoon);
+
+
+ //10 TASK
+function infoLolita(p) {
+    return   { ...p}
+}
+
+const p = {
+   name: `lolita`,
+   age: 13,
+   city: `paris`,
+ };
+ const infoo = infoLolita(p);
+console.log(infoo);
+
+
+//11 TASK
+let perrson = {
+    name: `maria`,
+    age: 19,
+    city: `moskow`,
   }
-  console.log(summa);
-}
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(summaFn(array));
 
-//TASK6
-function dobleChar(str) {
-  let result = "";
-  for (let i = 0; i < str.length; i++) {
-    result += str[i] + str[i];
-  }
-  return result;
-}
-console.log(dobleChar(`akuse`));
+    const   {
+     city,...newP
+    }  = perrson 
 
-//TASK7
-function withZero(arr) {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    result.push(Math.max(0, arr[i]));
-  }
-  return result;
-}
-console.log(withZero([-1, 3, 4, -5]));
+    
+    console.log(newP);
 
-//TASK8
-function isNumber(num) {
-  if (num <= 1) {
-    return false;
-  }
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
-console.log(isNumber(2));
+//12 TASK
+const numbers = [1, 2, 3, 4, 5];
+const [first, ...all] = numbers;
+const newArray = [first, ...all];
 
-//TASK9
-function fnArray(arr) {
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    result.push(arr[i] * arr[i]);
-  }
-  return result;
-}
-console.log(fnArray([1, 2, 3, 4, 5, 6]));
+console.log(newArray);
 
-//TASK10
 
-//TASK11
-function areAnagrams(str1, str2) {
-  if (str1.length !== str2.length) {
-    return false;
-  }
-  let sortedStr1 = str1.split("").sort().join("");
-  let sortedStr2 = str2.split("").sort().join("");
-  return sortedStr1 === sortedStr2;
-}
-console.log(areAnagrams(`neerg`, `green`));
-
-//TASK12
-function twoElements(arr1, arr2) {
-  let result = [];
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr2.includes(arr1[i])) {
-      result.push(arr1[i]);
-    }
-  }
-  return result;
-}
-console.log(twoElements([1, 2, 3, 4], [0, 2, 9, 4]));
-
-//TASK13
-function replaceElem(str) {
-  let glasnye = "aeiouAEIOU";
-  let result = "";
-  for (let i = 0; i < str.length; i++) {
-    if (glasnye.includes(str[i])) {
-      result += "*";
-    } else {
-      result += str[i];
-    }
-  }
-  return result;
-}
-console.log(replaceElem(`child`));
-
-//TASK14
-function reverseStrings(arr) {
-  const result = [];
-  for (let i = 0; i < arr.length; i++) {
-    const str = arr[i];
-    const reversed = str.split("").reverse().join("");
-    result.push(reversed);
-  }
-  return result;
-}
-
-console.log(reverseStrings(["I", "belive", "I", "can"]));
+//13 TASK
+const person11 = {
+    namee: 'malik',
+    agee: 30,
+  };
+  
+  const person22 = {
+    cityy: 'Paris',
+    gendeer: 'male',
+  };
+  
+  const { namee } = person11;
+  const { cityy, gendeer } = person22;
+  
+  const newwPerson = {
+    namee,
+    ...person22,
+  };
+  
+  console.log(newwPerson); 
+  
+  
+//14 TASK
+const personnn = {
+    name: 'Akylai',
+    age: 15,
+    hobbies: ['sleep', 'read'],
+  };
+  
+  const { hobbies, ...newwwPerson } = personnn;
+  
+  const newPerrrson = {
+    ...newwwPerson,
+    hobbies: [...hobbies],
+  };
+  
+  console.log(newPerrrson);
+  
+// 15 TASK
+ const person = {
+   name: 'Kate',
+   age: 20,
+   city:`Newyork`
+ }
+ function getInfo(person) {
+   const { name, age, city } = person;
+   return `${name} ${age} ${city} Country: USA`;
+ }
+ const info = getInfo(person);
+ console.log(info); 
